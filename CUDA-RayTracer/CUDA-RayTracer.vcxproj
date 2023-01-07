@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\gpc\gpc.c" />
+    <ClCompile Include="..\imgui_docking\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\imgui_docking\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui_demo.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui_draw.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui_node_graph_test.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui_tables.cpp" />
+    <ClCompile Include="..\imgui_docking\imgui_widgets.cpp" />
+    <ClCompile Include="..\imgui_docking\misc\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="Attachment.cpp" />
+    <ClCompile Include="Bezier.cpp" />
+    <CudaCompile Include="..\cuda_math\Random.cu" />
+    <CudaCompile Include="..\cuda_math\Sample.cu" />
+    <CudaCompile Include="BVH.cu" />
+    <CudaCompile Include="Camera.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="ClosedCurve.cpp" />
+    <ClCompile Include="CubeMap.cpp" />
+    <ClCompile Include="CudaHelpers.cpp" />
+    <ClCompile Include="Curve.cpp" />
+    <CudaCompile Include="DirectionalLight.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="dTexture.cpp" />
+    <CudaCompile Include="mesh_initialization_kernels.cu" />
+    <CudaCompile Include="Vertex.cu" />
+    <CudaCompile Include="EnvironmentLight.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="GeodesicDome.cpp" />
+    <ClCompile Include="GeodesicSphere.cpp" />
+    <ClCompile Include="LModule.cpp" />
+    <ClCompile Include="LRule.cpp" />
+    <ClCompile Include="MaterialPreviewWindow.cpp" />
+    <ClCompile Include="Overlay.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="RenderEngine.cpp" />
+    <CudaCompile Include="light_initialization_kernels.cu" />
+    <CudaCompile Include="RenderWindow.cpp" />
+    <ClCompile Include="SkeletonMesh.cpp" />
+    <ClCompile Include="Subject.cpp" />
+    <CudaCompile Include="Transform.cu" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="ImageViewWindow.cpp" />
+    <ClCompile Include="Interop.cpp" />
+    <CudaCompile Include="Light.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="LSystem.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="massert.cpp" />
+    <CudaCompile Include="Material.cu" />
+    <CudaCompile Include="Mesh.cu" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ObjectEditWindow.cpp" />
+    <ClCompile Include="PathTracer.cpp" />
+    <ClCompile Include="PerspectiveCamera.cpp" />
+    <ClCompile Include="PointLight.cpp" />
+    <ClCompile Include="Rasterizer.cpp" />
+    <ClCompile Include="RenderingContext.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
+    <CudaCompile Include="Scene.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="SceneViewWindow.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureArray.cpp" />
+    <CudaCompile Include="Triangle.cu" />
+    <ClCompile Include="Turtle.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <CudaCompile Include="wavefront_kernels.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cuda_math\CudaCommon.h" />
+    <ClInclude Include="..\cuda_math\dMath.h" />
+    <ClInclude Include="..\cuda_math\GLCommon.h" />
+    <ClInclude Include="..\cuda_math\Matrix.h" />
+    <ClInclude Include="..\cuda_math\Random.h" />
+    <ClInclude Include="..\cuda_math\Sample.h" />
+    <ClInclude Include="..\cuda_math\Vector.h" />
+    <ClInclude Include="..\gpc\gpc.h" />
+    <ClInclude Include="Attachment.h" />
+    <ClInclude Include="Bezier.h" />
+    <ClInclude Include="Bounds3f.h" />
+    <ClInclude Include="dBRDF.cuh" />
+    <ClInclude Include="BVH.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="ClosedCurve.h" />
+    <ClInclude Include="CubeMap.h" />
+    <ClInclude Include="CudaHelpers.h" />
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="dAreaLight.cuh" />
+    <ClInclude Include="Film.h" />
+    <ClInclude Include="DirectionalLight.h" />
+    <ClInclude Include="dMaterial.cuh" />
+    <ClInclude Include="dRay.cuh" />
+    <ClInclude Include="dTexture.cuh" />
+    <ClInclude Include="dTexture.h" />
+    <ClInclude Include="mesh_initialization_kernels.cuh" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="EnvironmentLight.h" />
+    <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="GeodesicDome.h" />
+    <ClInclude Include="GeodesicSphere.h" />
+    <ClInclude Include="light_initialization_kernels.cuh" />
+    <ClInclude Include="LModule.h" />
+    <ClInclude Include="LRule.h" />
+    <ClInclude Include="MaterialPreviewWindow.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Overlay.h" />
+    <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="RenderEngine.h" />
+    <ClInclude Include="RenderWindow.h" />
+    <ClInclude Include="SkeletonMesh.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="GLCommon.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="Helpers.cuh" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="ImageViewWindow.h" />
+    <ClInclude Include="Interop.h" />
+    <ClInclude Include="Isect.cuh" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LSystem.h" />
+    <ClInclude Include="massert.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="MemoryArena.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="ObjectEditWindow.h" />
+    <ClInclude Include="PathTracer.h" />
+    <ClInclude Include="PerspectiveCamera.h" />
+    <ClInclude Include="PointLight.h" />
+    <ClInclude Include="Rasterizer.h" />
+    <ClInclude Include="RenderingContext.h" />
+    <ClInclude Include="RenderObject.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneViewWindow.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureArray.h" />
+    <ClInclude Include="Turtle.h" />
+    <ClInclude Include="Wavefront.cuh" />
+    <ClInclude Include="wavefront_kernels.cuh" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="dBRDF.cu" />
+    <CudaCompile Include="dAreaLight.cu" />
+    <CudaCompile Include="Film.cu" />
+    <CudaCompile Include="dMaterial.cu" />
+    <CudaCompile Include="dRay.cu" />
+    <CudaCompile Include="dTexture.cu" />
+    <CudaCompile Include="Helpers.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CUDA-RayTracer.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{63904427-B4E6-4E0C-9AC5-11D68762DA18}</ProjectGuid>
+    <RootNamespace>CUDA_RayTracer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\jake\source\repos\Firefly\cuda_math;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\jake\source\repos\Firefly\cuda_math;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;GLFW_INCLUDE_NONE;CUDA_ARCH;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\cuda_math;$(ProjectDir)..\imgui_docking;$(ProjectDir)..\imnodes-0.5;$(ProjectDir)..\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cuda.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\assimp\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <GPUDebugInfo>true</GPUDebugInfo>
+      <GenerateLineInfo>false</GenerateLineInfo>
+      <Include>$(ProjectDir)..\cuda_math;$(ProjectDir)..\imgui_docking;$(ProjectDir)..\imnodes-0.5;$(ProjectDir)..\assimp\include;%(AdditionalLibraryDirectories)</Include>
+      <InterleaveSourceInPTX>true</InterleaveSourceInPTX>
+      <CodeGeneration>compute_86,sm_86</CodeGeneration>
+    </CudaCompile>
+    <CudaLink />
+    <CudaLink>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <UseHostLibraryDependencies>false</UseHostLibraryDependencies>
+    </CudaLink>
+    <PreBuildEvent>
+      <Command>xcopy /y /d "..\assimp\lib\Debug\assimp-vc142-mtd.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;GLFW_INCLUDE_NONE;CUDA_ARCH;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\cuda_math;$(ProjectDir)..\imgui_docking;$(ProjectDir)..\imnodes-0.5;$(ProjectDir)..\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;cuda.lib;nvrtc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\assimp\lib\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateLineInfo>false</GenerateLineInfo>
+      <Include>$(ProjectDir)..\cuda_math;$(ProjectDir)..\imgui_docking;$(ProjectDir)..\imnodes-0.5;$(ProjectDir)..\assimp\include;%(AdditionalLibraryDirectories)</Include>
+      <Optimization>InheritFromHost</Optimization>
+      <InterleaveSourceInPTX>false</InterleaveSourceInPTX>
+      <FastMath>true</FastMath>
+      <CodeGeneration>compute_86,sm_86</CodeGeneration>
+    </CudaCompile>
+    <CudaLink />
+    <CudaLink>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </CudaLink>
+    <PreBuildEvent>
+      <Command>xcopy /y /d "..\assimp\lib\Release\assimp-vc142-mt.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.targets" />
+  </ImportGroup>
+</Project>

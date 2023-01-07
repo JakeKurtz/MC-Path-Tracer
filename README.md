@@ -1,4 +1,4 @@
-![alt text](https://github.com/JakeKurtz/MC-Path-Tracer/blob/main/images/Banner.png?raw=true)
+![alt text](https://github.com/JakeKurtz/MC-Path-Tracer/blob/main/images/Banner.png)
 
 # FEATURES
 - ## BRDFs

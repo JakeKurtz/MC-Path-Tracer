@@ -4,6 +4,22 @@
 
 /.vs
 /gpu-ray-traversal
-/hrdi
 /CUDA-RayTracer/x64
 /x64
+/hrdi/grace.hdr
+/hrdi/grace.exr
+/hrdi/field.hdr
+/hrdi/field.exr
+/hrdi/ennis.hdr
+/hrdi/ennis.exr
+/hrdi/dresden_station_night_4k.hdr
+/hrdi/doge.exr
+/hrdi/circus_arena_4k.hdr
+/hrdi/cinema_lobby_4k.hdr
+/hrdi/uffizi.exr
+/hrdi/the_sky_is_on_fire_4k.hdr
+/hrdi/teufelsberg_lookout_4k.hdr
+/hrdi/spruit_sunrise_4k.hdr
+/hrdi/mealie_road_4k.hdr
+/hrdi/lapa_4k.hdr
+/hrdi/HDR_029_Sky_Cloudy_Ref_xsl.hdr

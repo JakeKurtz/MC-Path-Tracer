@@ -5,4 +5,5 @@
 /.vs
 /gpu-ray-traversal
 /hrdi
-/models
+/CUDA-RayTracer/x64
+/x64

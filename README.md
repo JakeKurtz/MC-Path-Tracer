@@ -26,8 +26,8 @@
     
     The strategy used for sampling is as follows
     
-      1. Sample a row of the environment map using the MDF P(y)
-      2. Sample a pixel within that row using the CDF P(x|y)
+      1. Sample a row of the environment map using the marginal density function P(y)
+      2. Sample a pixel within that row using the conditional density function P(x|y)
       3. Convert that (x,y) to a direction vector and return the appropriate radiance and PDF value.
 
     ### Results
@@ -71,7 +71,7 @@
 
   ### Glossy Specular 
   
-  This path tracer implementes the microfacet model for the glossy specular, as described by [cook-torrance](https://graphics.pixar.com/library/ReflectanceModel/paper.pdf), i.e.
+  This path tracer implements the microfacet model for the glossy specular, as described by [cook-torrance](https://graphics.pixar.com/library/ReflectanceModel/paper.pdf), i.e.
   
   $$f(l, v) = {D(h)F(v, h)G(l,v,h)\over{4(n\cdot l)(n\cdot v)}}$$
   
@@ -81,7 +81,7 @@
   $$G(v) = {2(n\cdot v) \over {(n\cdot v) + \sqrt{\alpha^2 + (1 - \alpha^2)(n\cdot v)^2}}}$$
   $$F(v, h) = F0 + (1 - F0)(1 - (v\cdot h))^5$$
   
-  Since the normal distribution function ( $NDF$ ) is the dominant term, we sample it to determin how the exitence radiance is reflected with respect to the surface normal. The probability distribution function ( $PDF$ ) is thus derived from the $NDF$.
+  Since the normal distribution function ( $NDF$ ) is the dominant term, we sample it to determine how the exitance radiance is reflected with respect to the surface normal. The probability distribution function ( $PDF$ ) is thus derived from the $NDF$.
   
   The term, such that the $NDF$ term is normalized is $$\int_\Omega D(h)(n\cdot h)d\omega_h = 1$$
   
@@ -90,7 +90,7 @@
   $$p(\theta) = \int_\Omega D(m)\cos{\theta_m}d\omega_m$$
   $$p(\theta) = \int_0^{2\pi}\int_0^{\pi\over{2}} D(m)\cos{\theta_m}\sin{\theta_m}d\theta_m d\phi_m = 2\pi D(m)\cos{\theta_m}\sin{\theta_m}$$
   
-  The conditional density ( $CDF$ ) for $\phi$ is 
+  The conditional density function ( $CDF$ ) for $\phi$ is 
   
   $$p(\phi|\theta) = {p(\theta, \phi)\over{p(\theta)}} = {D(m)\cos{\theta_m}\sin{\theta_m} \over{2\pi D(m)\cos{\theta_m}\sin{\theta_m}}} = {1\over{2\pi}}$$
   
@@ -102,7 +102,7 @@
 
   ### Lambertian Diffuse
   
-  This path tracer also implementes the classic [Lambertian reflectance model](https://en.wikipedia.org/wiki/Lambertian_reflectance), i.e.
+  This path tracer also implements the classic [Lambertian reflectance model](https://en.wikipedia.org/wiki/Lambertian_reflectance), i.e.
   
   $f(l, v) = {albedo\over{\pi}}$
   

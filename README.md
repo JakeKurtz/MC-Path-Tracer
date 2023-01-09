@@ -2,7 +2,6 @@
 
 # FEATURES
 - ## Multiple Importance Sampling
-
     ### Results
     | BRDF Sample | Light Sample | MIS |
     | :---: | :---: | :---: |
@@ -23,15 +22,13 @@
    
     | ![alt text](https://github.com/JakeKurtz/MC-Path-Tracer/blob/main/images/heat_map.png?raw=true) | 
     |:--| 
-    | *heat map of where samples are being drawn.* |
+    | *Heat map of where samples are being drawn. Bright pixels are more likely to be sampled!* |
     
     The strategy used for sampling is as follows
     
-      1. Sample a row of the environment map using the marginal distribution p(y)
-
-      2. Sample a pixel within that row using the condition distribution p(x|y)
-
-      3. Convert that (x,y) to a direction vector and return the appropriate radiance and pdf values.
+      1. Sample a row of the environment map using the MDF P(y)
+      2. Sample a pixel within that row using the CDF P(x|y)
+      3. Convert that (x,y) to a direction vector and return the appropriate radiance and PDF value.
 
     ### Results
     | Pre-Filtering HRDI | Uniform Sampling| Importance Sampling|
@@ -46,15 +43,23 @@
     - CUDA-RayTracer/EnvironmentLight.cu
   
     ### Sources:
+  - [PBR: 2D Sampling with Multidimensional Transformations](https://www.pbr-book.org/3ed-2018/Monte_Carlo_Integration/2D_Sampling_with_Multidimensional_Transformations)
   - [PBR: Sampling Lights](https://www.pbr-book.org/3ed-2018/Light_Transport_I_Surface_Reflection/Sampling_Light_Sources)
   - [Berkeley: Environment Map Lights](https://cs184.eecs.berkeley.edu/sp18/article/25)
 - ## CUDA Wavefront
-  Wavefront pathtracing avoids thread divergence by splitting up the render kernel into several smaller kernels, which are each responsible for a specific task e.g.
-    1. logic
-    2. generate ray
-    3. material ray
-    4. extend ray
-    5. shadow ray
+  
+  Unfortunately, in path tracing, thread divergence is unavoidable. This is a major problem when considering the [SIMT execution model](https://en.wikipedia.org/wiki/Single_instruction,_multiple_threads). Wavefront pathtracing attempts to solve this problem by avoiding thread divergence at all costs. This is done by splitting up the render kernel (Megakernel) into several smaller kernels, which are each responsible for a very specific task.
+  
+    - Logic
+        - Responsible for general logic i.e. computing MIS weights, update throughput, etc. 
+    - Generate ray
+        - Casts new ray from camera into the scene.
+    - Material
+        - Evaluates intersection point with respective material, chooses rays next path.
+    - Extend ray
+        - Intersects ray with scene.
+    - Shadow ray
+        - checks light visibility for intersection point.
   
     ### Implementation
     - CUDA-RayTracer/wavefront_kernels.cu

@@ -87,7 +87,7 @@
   
   The marginal density function ( $MDF$ ) for $p(\theta)$ is 
 
-  $$p(\theta) = \int_\Omega D(m)\cos{\theta_m}d\omega_h$$
+  $$p(\theta) = \int_\Omega D(m)\cos{\theta_m}d\omega_m$$
   $$p(\theta) = \int_0^{2\pi}\int_0^{\pi\over{2}} D(m)\cos{\theta_m}\sin{\theta_m}d\theta_m d\phi_m = 2\pi D(m)\cos{\theta_m}\sin{\theta_m}$$
   
   The conditional density ( $CDF$ ) for $\phi$ is 

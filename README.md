@@ -98,7 +98,7 @@
   
   | $\theta$ | $\phi$ |
   | :---:    | :---:  |
-  | $$P(\theta) = {\int_0^\theta 2\pi D(m)\cos{\theta_m'}}\sin{\theta_m'}d\theta_m' = {-\sin^2{x}\over{(\alpha^2-1)\sin^2{x}-\alpha^2}}$$ $$x = {-\sin^2{\theta}\over {(\alpha^2-1)\sin^2{\theta}-\alpha^2}}$$ $$\sin^2(\theta) = {\alpha^2x\over{x(\alpha^2-1)+1}}$$ $$\cos^2(\theta) = {1-x\over{x(\alpha^2-1)+1}}$$ $$\theta = cos^{-1}{\sqrt{1-\epsilon_0\over{\epsilon_0(\alpha^2-1)+1}}} $$ | $$P(\phi\|\theta) = \int_0^\phi{1\over{2\pi}d\phi_m'} = {\phi\over{2\pi}}$$ $$\phi = 2\pi\epsilon_1$$ |
+  | $$P(\theta) = {\int_0^\theta 2\pi D(m)\cos{\theta_m'}}\sin{\theta_m'}d\theta_m' = {-\sin^2{\theta}\over{(\alpha^2-1)\sin^2{\theta}-\alpha^2}}$$ $$x = {-\sin^2{\theta}\over {(\alpha^2-1)\sin^2{\theta}-\alpha^2}}$$ $$\sin^2(\theta) = {\alpha^2x\over{x(\alpha^2-1)+1}}$$ $$\cos^2(\theta) = {1-x\over{x(\alpha^2-1)+1}}$$ $$\theta = cos^{-1}{\sqrt{1-\epsilon_0\over{\epsilon_0(\alpha^2-1)+1}}} $$ | $$P(\phi\|\theta) = \int_0^\phi{1\over{2\pi}d\phi_m'} = {\phi\over{2\pi}}$$ $$\phi = 2\pi\epsilon_1$$ |
 
   ### Lambertian Diffuse
   
